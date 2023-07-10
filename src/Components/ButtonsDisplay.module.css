@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  gap: 40px;
+}
+.btn {
+  border-radius: 10px;
+  background-color: rgba(0, 123, 255, 0.769);
+  color: white;
+  border: none;
+  outline: none;
+}
+.btn:focus,
+.reset:focus {
+  border: none;
+  outline: none;
+}
+.btn:hover,
+.reset:hover {
+  background-color: rgba(0, 123, 255, 0.9);
+}
+.reset {
+  background-color: rgba(0, 123, 255, 0.76);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-size: small;
+}
