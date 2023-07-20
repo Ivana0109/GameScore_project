@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./ScoreTimerDisplay.module.css";
-
-function ScoreTimerDisplay({ scores }) {
+import { ScoreResults } from "../Container/types";
+type Props={
+  scores:ScoreResults[]
+}
+function ScoreTimerDisplay({ scores }:Props) {
   return (
     scores.length > 0 && (
       <div className={styles.container}>

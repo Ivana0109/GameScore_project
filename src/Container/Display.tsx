@@ -4,6 +4,7 @@ import ButtonsDisplay from "../Components/ButtonsDisplay";
 import ResultDisplay from "../Components/ResultDisplay";
 import ScoreTimerDisplay from "../Components/ScoreTimerDisplay";
 import styles from "./Display.module.css";
+import { ScoreResults } from "./types";
 
 function Display() {
   const [dataHome, setDataHome] = useState({
@@ -16,22 +17,23 @@ function Display() {
     imgSrc: "real.png",
     score: 0,
   });
-  const [scores, setScores] = useState([]);
+  const [scores, setScores] = useState<ScoreResults[]>([]);
   const [start] = useState(new Date());
 
-  const setCurrentTimeScore = (homeScore, awayScore) => {
+
+  const setCurrentTimeScore = (homeScore:number, awayScore:number) => {
     setScores([
       ...scores,
       { currentTime: calcGameTime(), homeScore, awayScore },
     ]);
   };
 
-  const setScoreHome = (newScore) => {
+  const setScoreHome = (newScore:number) => {
     setDataHome({ ...dataHome, score: newScore });
     setCurrentTimeScore(newScore, dataAway.score);
   };
 
-  const setScoreAway = (newScore) => {
+  const setScoreAway = (newScore:number) => {
     setDataAway({ ...dataAway, score: newScore });
     setCurrentTimeScore(dataHome.score, newScore);
   };
@@ -51,7 +53,7 @@ function Display() {
   };
 
   const calcGameTime = () => {
-    const time = new Date() - start;
+    const time= new Date().valueOf() - start.valueOf();
     let min = Math.floor((time / 1000 / 60) << 0);
     let sec = Math.floor((time / 1000) % 60);
 

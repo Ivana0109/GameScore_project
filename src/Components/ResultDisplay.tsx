@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./ResultDisplay.module.css";
-function ResultDisplay({ dataHome, dataAway }) {
+import { TeamData } from "../Container/types";
+
+
+function ResultDisplay({ dataHome, dataAway }:TeamData) {
   return (
     <div className={styles.container}>
       <div>

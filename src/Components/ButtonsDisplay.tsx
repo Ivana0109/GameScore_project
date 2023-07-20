@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "./ButtonsDisplay.module.css";
+import { TeamButtons } from "../Container/types";
+
+
 
 function ButtonsDisplay({
   setScoreHome,
@@ -7,7 +10,7 @@ function ButtonsDisplay({
   setScoreAway,
   dataAway,
   resetScore,
-}) {
+}:TeamButtons) {
   return (
     <div className={styles.container}>
       <button
