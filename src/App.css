@@ -1,7 +1,8 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  background: linear-gradient(96.8deg,#dfb676,#d1837f 32.81%,#8ec4aa 67.19%,#80abd8);
+
   text-align: center;
 }
 
@@ -42,6 +43,5 @@
 }
 body {
   background: linear-gradient(96.8deg,#dfb676,#d1837f 32.81%,#8ec4aa 67.19%,#80abd8);
-  
-  color: white;
+color: white;
 }

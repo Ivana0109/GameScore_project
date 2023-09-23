@@ -1,10 +1,18 @@
 .container {
   display: flex;
-  gap: 50px;
+  justify-content: space-around;
 }
 .img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   border: rgba(0, 123, 255, 0.4) 2px solid;
+}
+@media only screen and (max-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    
+  }
 }
